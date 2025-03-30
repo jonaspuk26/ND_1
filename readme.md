@@ -1,7 +1,7 @@
 # Projektas Kosmetikos parduotuvė
 
 Nuoroda į projektą: [Projektas Kosmetikos parduotuvė]
-(https://github.com/jonaspuk26)
+(https://jonaspuk26.github.io/ND_1/)
 
 ## Projekto funkcijos
 - Github pages
