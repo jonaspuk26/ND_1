@@ -43,7 +43,6 @@ export function init() {
                     cartItemsElem.appendChild(itemElem);
                 });
 
-                // Add event listeners for quantity controls
                 const quantityControls = document.querySelectorAll('.quantity-controls button');
                 quantityControls.forEach(button => {
                     button.addEventListener('click', function () {
