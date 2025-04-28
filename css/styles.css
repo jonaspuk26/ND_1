@@ -10,13 +10,13 @@ body {
 .logo-image {
     max-width: 50px;
     height: auto;
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
-.home-image {
+/* .home-image {
     width: 100%;
     height: auto;
-}
+} */
 
 .brand-container {
     display: flex;
@@ -44,7 +44,66 @@ header {
     padding: 0.5rem;
 }
 
-nav ul {
+header nav ul.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul.menu li {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul.menu li.logo {
+    margin-right: auto;
+    /* Pushes the logo to the left */
+}
+
+header nav ul.menu li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.content-wrapper {
+    position: relative;
+    min-height: 100vh;
+    /* Ensure the wrapper takes at least the full viewport height */
+}
+
+.content-container {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    /* Add padding to ensure content is not too close to the edges */
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    /* Optional: Add a semi-transparent background */
+}
+
+.home-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Ensure the image covers the full height of the content-wrapper */
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content-container h2,
+.content-container h3,
+.content-container ul {
+    position: relative;
+    /* /* Ensure these elements are positioned relative to the container */
+    z-index: 1;
+    /* Ensure these elements are above the background image */
+}
+
+*/ nav ul {
     list-style-type: none;
     padding: 0;
 }
@@ -56,19 +115,22 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #df1d1d;
 }
 
 main {
     flex: 1;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 footer {
+    position: relative;
+    z-index: 1;
     background-color: #568203;
     padding: 1rem;
     text-align: center;
     margin-top: auto;
+    padding: 20px;
 }
 
 .products-tables {

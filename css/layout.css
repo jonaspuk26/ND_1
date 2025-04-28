@@ -1,0 +1,82 @@
+/* Layout-specific styles */
+/* .content-wrapper {
+    position: relative;
+    min-height: 100vh;
+} */
+
+.content-container {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+.home-image {
+    position: relative;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.content-container h2,
+.content-container h3,
+.content-container ul {
+    position: relative;
+    z-index: 1;
+}
+
+.brand-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.brand {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.page-headline {
+    height: 4rem;
+}
+
+.bg-custom {
+    background-color: #535e4b;
+}
+
+.text-custom {
+    color: #d9dcda;
+}
+
+.about-us-page {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+}
+
+.about-us-list ul {
+    list-style-type: disc;
+    /* Ensure list items have bullet points */
+    /* padding-left: 20px; */
+    /* Add padding to the left for bullet points */
+    padding: 20px;
+}
+
+.about-us-list ul li {
+    margin-bottom: 50px;
+    /* Add space between list items */
+    display: list-item;
+}

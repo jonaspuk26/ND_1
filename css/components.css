@@ -1,0 +1,300 @@
+/* Header styles */
+header {
+    background-color: #fff;
+}
+
+header nav ul.menu {
+    display: flex;
+    /* justify-content: space-between;
+    align-items: center; */
+}
+
+header nav ul.menu li {
+    display: flex;
+    align-items: center;
+    border: 2px solid transparent;
+}
+
+header nav ul.menu li.logo {
+    margin-right: auto;
+}
+
+header nav ul.menu li a {
+    text-decoration-color: none;
+    color: inherit;
+    padding: 0.7rem;
+}
+
+header nav ul.menu li:hover {
+    border-left: 2px solid #535e4b;
+    border-right: 2px solid #535e4b;
+    background-color: #c0cdb5;
+    /* Border color */
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 1); */
+}
+
+header nav ul.menu li.logo:hover {
+    background-color: #fff;
+}
+
+.logo-image {
+    max-width: 120px;
+    height: auto;
+}
+
+/* Footer styles */
+footer {
+    background-color: #fff;
+    color: rgba(0, 0, 0, .5);
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
+    padding: 20px;
+    z-index: 0;
+}
+
+.footer-static {
+    position: sticky;
+    position: bottom;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #535e4b;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.footer-static a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-static a:hover {
+    text-decoration: underline;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-check {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+.form-check-input {
+    height: auto;
+    width: 1rem;
+}
+
+.total-sum {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.form {
+    margin: 20px;
+}
+
+/* Form styles */
+form {
+    max-width: 500px;
+    margin: 0;
+}
+
+form label {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+form button {
+    padding: 0.5rem 1rem;
+    background-color: #535e4b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #c0cdb5;
+}
+
+/* Product table styles */
+.products-tables {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media (max-width: 992px) {
+    .products-tables {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+.one-product-table {
+    width: 100%;
+    max-width: 300px;
+    max-height: max-content;
+    height: 100%;
+    border-collapse: collapse;
+    margin: 10px;
+    table-layout: fixed;
+    /* Ensure consistent column widths */
+    display: block;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* Add border and shadow on hover */
+.one-product-table:hover {
+    border: 2px solid #535e4b;
+    /* Border color */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+    /* Shadow effect */
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition */
+}
+
+.one-product-table td {
+    vertical-align: top;
+    /* Align cell content to the top */
+    padding: 10px;
+    /* Add padding for better readability */
+    word-wrap: break-word;
+    /* Ensure long text breaks correctly */
+}
+
+.one-product-table tr {
+    vertical-align: top;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border: none;
+}
+
+td strong {
+    display: inline-block;
+    width: 120px;
+    text-align: left;
+}
+
+/* Why Choose Us? section styles */
+.content-container ul {
+    list-style-type: disc;
+    /* Ensure list items have bullet points */
+    padding-left: 20px;
+    /* Add padding to the left for bullet points */
+}
+
+.content-container ul li {
+    display: list-item;
+    margin-bottom: 10px;
+    /* Add space between list items */
+}
+
+/* Style the dropdown toggle button */
+.custom-dropdown-toggle {
+    background: none;
+    border: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    font-size: 20px;
+    /* Adjust the font size as needed */
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+/* Style the dropdown header */
+.dropdown-header {
+    text-align: center;
+}
+
+/* Initially hide the dropdown content */
+.dropdown-content {
+    height: 100px;
+    /* Reserve space for the dropdown content */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-content.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Style the dropdown text */
+.dropdown-text {
+    font-size: 16px;
+    /* Adjust the font size as needed */
+    text-align: center;
+    padding: 10px;
+    /* Add some padding for better readability */
+}
+
+/* Style the dropdown arrow */
+.dropdown-arrow {
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate the arrow when the content is visible */
+.custom-dropdown-toggle.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.about-us-image {
+    width: 30%;
+    height: auto;
+    margin: 20px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+#fullWidthCarousel {
+    display: flex;
+}
