@@ -80,3 +80,12 @@
     /* Add space between list items */
     display: list-item;
 }
+
+.cart-items-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    /* Ensure the container takes the full height of the viewport */
+    text-align: center;
+}

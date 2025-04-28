@@ -1,6 +1,7 @@
 export function init() {
     const cartItemsElem = document.getElementById('cart-items');
     const totalSumElem = document.getElementById('total-sum');
+    const cartButton = document.getElementById('cart-button');
 
     function calculateTotalSum() {
         const totalSum = window.cart.reduce((total, product) => total + (product.price * product.quantity), 0);
@@ -12,10 +13,16 @@ export function init() {
     function renderCartItems() {
         if (cartItemsElem) {
             if (window.cart.length === 0) {
-                cartItemsElem.innerHTML = '<p>No items added</p>';
+                cartItemsElem.classList.add('cart-items-container');
+                cartItemsElem.innerHTML = '<p>Krepšelis tuščias</p>';
+                cartButton.disabled = true;
             } else {
+                cartButton.addEventListener('click', function () {
+                    window.location.href = 'uzsakymas.html';
+                });
                 cartItemsElem.innerHTML = '';
                 window.cart.forEach(product => {
+                    cartItemsElem.classList.remove('cart-items-container');
                     const itemElem = document.createElement('div');
                     itemElem.classList.add('card', 'mb-3');
                     itemElem.innerHTML = `
