@@ -30,4 +30,27 @@ export function init() {
 
     updateTotalSum();
     validateForm();
+
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const order = {
+            name: document.getElementById('name').value,
+            surname: document.getElementById('surname').value,
+            email: document.getElementById('email').value,
+            items: window.cart, // assuming your cart has productId, name, price, quantity
+            orderAmount: window.cart.reduce((total, product) => total + (product.price * product.quantity), 0)
+        };
+
+        const res = await fetch('http://localhost:5000/api/orders', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(order)
+        });
+
+        const data = await res.json();
+        console.log('Order submitted:', data);
+        console.log('Order amount:', window.cart.reduce((total, product) => total + (product.price * product.quantity), 0));
+    });
+
 }
